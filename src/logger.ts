@@ -1,7 +1,7 @@
 type Logger = {
-  log: (...msg: string[]) => any
-  warn: (...msg: string[]) => any
-  error: (...msg: string[]) => any
+  log: (...msg: string[]) => void
+  warn: (...msg: string[]) => void
+  error: (...msg: string[]) => void
 }
 
 const logger: Logger = {

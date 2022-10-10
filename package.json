@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "format": "prettier --write \"**/*.+(js|ts|tsx|json)\"",
-    "lint-staged": "lint-staged"
+    "format": "prettier --write \"**/*.+(js|ts|json)\"",
+    "lint-staged": "lint-staged",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,11 @@
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
@@ -27,6 +33,7 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "lint-staged": {
-    "*.{ts, tsx, js, json}": "npm run format"
+    "*.{ts, js, json}": "npm run format",
+    "*.ts": "npm run lint"
   }
 }
