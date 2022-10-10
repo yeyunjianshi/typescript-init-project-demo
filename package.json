@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "format": "prettier --write \"**/*.+(js|ts|json)\""
+    "format": "prettier --write \"**/*.+(js|ts|tsx|json)\"",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -25,13 +26,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "list-staged": {
-    "*": "npm run format",
-    "*.ts, *.js": "echo '12313'"
+  "lint-staged": {
+    "*.{ts, tsx, js, json}": "npm run format"
   }
 }

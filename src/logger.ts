@@ -9,7 +9,7 @@ const logger: Logger = {
     console.log(msg.join(', '))
   },
   warn(...msg: string[]) {
-    console.warn(msg.join  (', '))
+    console.warn(msg.join(', '))
   },
   error(...msg: string[]) {
     console.error(msg.join(', '))
