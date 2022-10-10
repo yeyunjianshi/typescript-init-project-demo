@@ -1,4 +1,5 @@
 'use strict'
+Object.defineProperty(exports, '__esModule', { value: !0 })
 const o = {
   log(...o) {
     console.log(o.join(', '))
@@ -10,4 +11,4 @@ const o = {
     console.error(o.join(', '))
   },
 }
-module.exports = () => o
+;(exports.add = (o, e) => o + e), (exports.default = () => o)

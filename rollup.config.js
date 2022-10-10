@@ -7,7 +7,6 @@ export default {
     {
       file: 'dist/logger.js',
       format: 'cjs',
-      exports: 'default',
       plugins: [terser()],
     },
     {
